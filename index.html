@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#E8A0B4">
+<title>Bembé · Sets de ropa deportiva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500;600&display=swap"></noscript>
+<style>
+:root{
+  --bg:#FBF3EF;           /* beige rosado muy claro */
+  --bg-warm:#F5E6DD;      /* beige cálido */
+  --ink:#3E2A2E;          /* café vinoso oscuro (texto) */
+  --ink-soft:#977A78;
+  --line:#EBD9D0;
+  --card:#FFFFFF;
+  --rose:#E8A0B4;         /* rosa base */
+  --rose-deep:#D46E8C;    /* rosa fuerte */
+  --rose-soft:#F6D9E1;    /* rosa pálido */
+  --mauve:#C98A9B;        /* malva */
+  --beige:#E5C9A8;        /* beige dorado acento */
+  --save:#4E9E75;
+  --wa:#25D366;
+  --shadow:0 2px 18px rgba(62,42,46,.06);
+  --shadow-lift:0 14px 40px rgba(62,42,46,.14);
+  --r:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;
+  line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:88px;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:400}
+img,video{display:block;width:100%;height:100%;object-fit:cover}
+button{font-family:'Jost',sans-serif;cursor:pointer}
+
+.topbar{background:var(--ink);color:var(--rose-soft);text-align:center;
+  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;font-weight:400}
+
+header{position:sticky;top:0;z-index:50;background:rgba(251,243,239,.92);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem}
+.brand{font-family:'Fraunces',serif;font-size:1.5rem;letter-spacing:.01em;font-weight:600;color:var(--ink)}
+.brand span{color:var(--rose-deep)}
+.hdr-bag{background:var(--rose-deep);border:none;color:#fff;padding:.55rem .9rem;border-radius:40px;
+  font-size:.8rem;font-weight:500;display:flex;align-items:center;gap:.4rem}
+.hdr-bag .dot{background:#fff;color:var(--rose-deep);border-radius:50%;min-width:19px;height:19px;
+  display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:600;padding:0 .28rem}
+
+/* menú de navegación (sticky bajo el header) */
+.navmenu{position:sticky;top:56px;z-index:45;background:rgba(251,243,239,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);display:flex;gap:.3rem;padding:.5rem .6rem;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none}
+.navmenu::-webkit-scrollbar{display:none}
+.navmenu a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:.82rem;font-weight:500;
+  padding:.45rem .9rem;border-radius:30px;white-space:nowrap;transition:all .2s;border:1px solid transparent}
+.navmenu a:active{transform:scale(.96)}
+.navmenu a.on{background:var(--rose-deep);color:#fff}
+@media(hover:hover){.navmenu a:hover{background:var(--rose-soft)}}
+
+/* banner explicativo (cómo funciona) */
+.explainer{max-width:680px;margin:.5rem auto 0;padding:0 1.1rem}
+.explainer-inner{background:linear-gradient(135deg,var(--rose-soft),#fff);border:1px solid var(--rose-soft);
+  border-radius:18px;padding:1.1rem 1.2rem;display:flex;flex-direction:column;gap:.7rem}
+.ex-step{display:flex;gap:.7rem;align-items:flex-start;font-size:.88rem;line-height:1.4}
+.ex-step b{color:var(--rose-deep);font-weight:600}
+.ex-num{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--rose-deep);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;font-family:'Fraunces',serif}
+
+.hero{text-align:center;padding:2.4rem 1.2rem 1.4rem;max-width:640px;margin:0 auto}
+.hero .eyebrow{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--rose-deep);
+  margin-bottom:.8rem;font-weight:500}
+.hero h1{font-size:clamp(1.85rem,7vw,3rem);line-height:1.08;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--rose-deep)}
+.hero p{color:var(--ink-soft);font-size:.98rem;margin-top:.85rem;max-width:440px;margin-inline:auto}
+.hero-cta{display:inline-flex;gap:.4rem;margin-top:1.3rem;background:var(--ink);color:#fff;
+  text-decoration:none;padding:.8rem 1.6rem;border-radius:40px;font-size:.92rem;transition:transform .2s,background .2s}
+.hero-cta:active{transform:scale(.97)}
+
+/* barra de regalos (gamificación AOV) */
+.giftbar{max-width:620px;margin:.4rem auto 0;padding:0 1.2rem}
+.giftbar-inner{background:linear-gradient(100deg,var(--rose-soft),#fff);border:1px solid var(--rose-soft);
+  border-radius:16px;padding:.8rem 1rem;display:flex;align-items:center;gap:.7rem;font-size:.82rem}
+.giftbar .gift-ico{font-size:1.3rem}
+.giftbar .gift-txt{flex:1;line-height:1.35}
+.giftbar .gift-txt b{color:var(--rose-deep);font-weight:600}
+
+.shead{max-width:1180px;margin:2.2rem auto .1rem;padding:0 1.1rem}
+.shead .kicker{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--beige);
+  font-weight:600;margin-bottom:.35rem;filter:brightness(.85)}
+.shead h2{font-size:clamp(1.45rem,5vw,2rem);letter-spacing:-.01em}
+.shead p{color:var(--ink-soft);margin-top:.4rem;max-width:520px;font-size:.92rem}
+
+/* GRID — 1 col en móvil, más en desktop */
+.grid{max-width:1180px;margin:1.1rem auto;padding:0 1.1rem;display:grid;
+  grid-template-columns:1fr;gap:1.3rem}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:940px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s}
+@media(hover:hover){.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift)}}
+.badge{position:absolute;top:12px;left:12px;z-index:6;background:var(--rose-deep);color:#fff;
+  font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.32rem .65rem;border-radius:40px;
+  box-shadow:0 2px 8px rgba(212,110,140,.35)}
+.badge.gold{background:var(--beige);color:var(--ink);box-shadow:none}
+.badge.mauve{background:var(--mauve)}
+
+/* GALERÍA */
+.gallery{position:relative;aspect-ratio:3/4;background:var(--bg-warm);overflow:hidden;touch-action:pan-y}
+.gallery .slide{position:absolute;inset:0;opacity:0;transition:opacity .35s;pointer-events:none}
+.gallery .slide.active{opacity:1;pointer-events:auto}
+.gallery .ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;
+  color:var(--ink-soft);font-size:.72rem;text-align:center;padding:1rem;
+  background:linear-gradient(150deg,var(--rose-soft),var(--bg-warm));width:100%;height:100%}
+.gdots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:5;display:flex;gap:5px}
+.gdots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);
+  transition:all .2s;border:1px solid rgba(0,0,0,.05)}
+.gdots i.on{background:#fff;width:15px;border-radius:4px}
+.gnav{position:absolute;top:0;bottom:24px;width:38%;z-index:4;background:transparent;border:none}
+.gnav.prev{left:0}.gnav.next{right:0}
+.vtag{position:absolute;top:12px;right:12px;z-index:5;background:rgba(62,42,46,.6);color:#fff;
+  font-size:.58rem;letter-spacing:.08em;padding:.24rem .5rem;border-radius:30px;backdrop-filter:blur(4px);
+  display:flex;align-items:center;gap:.25rem}
+
+.cbody{padding:1rem 1.05rem 1.1rem;display:flex;flex-direction:column;flex:1}
+.cname{font-size:1.2rem;letter-spacing:-.01em;line-height:1.15}
+.cpieces{color:var(--ink-soft);font-size:.82rem;margin-top:.25rem;line-height:1.4}
+.talla{display:inline-block;margin-top:.5rem;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-soft);border:1px solid var(--line);padding:.2rem .55rem;border-radius:30px}
+.prow{margin-top:.9rem;display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+.pnow{font-family:'Fraunces',serif;font-size:1.55rem;color:var(--ink)}
+.pold{color:var(--ink-soft);text-decoration:line-through;font-size:.88rem}
+.psave{margin-left:auto;background:var(--rose-soft);color:var(--rose-deep);font-size:.7rem;
+  font-weight:600;padding:.28rem .55rem;border-radius:30px}
+.badd{margin-top:.85rem;background:var(--ink);color:#fff;border:none;font-size:.9rem;font-weight:500;
+  letter-spacing:.01em;padding:.9rem 1rem;border-radius:40px;transition:transform .15s,background .2s}
+.badd:active{transform:scale(.98)}
+.badd.added{background:var(--save)!important}
+@media(hover:hover){.badd:hover{background:var(--rose-deep)}}
+
+/* ARMA TU SET */
+.armabox{max-width:1180px;margin:1.1rem auto;padding:0 1.1rem}
+.arma-inner{background:linear-gradient(165deg,#fff,var(--rose-soft));border:1.5px solid var(--rose-soft);
+  border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+.arma-gallery{position:relative;aspect-ratio:3/4;background:var(--bg-warm);max-height:70vh}
+.arma-gallery img{object-fit:cover;object-position:center 20%}
+.arma-body{padding:1.1rem 1.15rem 1.3rem}
+.arma-body .cname{font-size:1.25rem}
+.arma-opts{margin-top:.9rem}
+.arma-opts .lbl{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.5rem}
+.opt-chips{display:flex;flex-direction:column;gap:.5rem}
+.opt-chip{display:flex;align-items:center;gap:.6rem;border:1.5px solid var(--line);background:#fff;
+  border-radius:14px;padding:.65rem .8rem;transition:all .2s;text-align:left;width:100%}
+.opt-chip.on{border-color:var(--rose-deep);background:var(--rose-soft)}
+.opt-chip .oc-radio{width:18px;height:18px;border-radius:50%;border:2px solid var(--line);flex-shrink:0;position:relative;transition:border-color .2s}
+.opt-chip.on .oc-radio{border-color:var(--rose-deep)}
+.opt-chip.on .oc-radio::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--rose-deep)}
+.opt-chip .oc-name{flex:1;font-size:.9rem;line-height:1.25}
+.opt-chip .oc-price{text-align:right;font-size:.82rem}
+.opt-chip .oc-price b{font-family:'Fraunces',serif;font-size:1rem;display:block}
+.opt-chip .oc-price s{color:var(--ink-soft);font-size:.72rem}
+
+/* SUELTOS grid */
+.sologrid{max-width:1180px;margin:1.1rem auto 2rem;padding:0 1.1rem;display:grid;
+  grid-template-columns:repeat(2,1fr);gap:1rem}
+@media(min-width:640px){.sologrid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:940px){.sologrid{grid-template-columns:repeat(4,1fr)}}
+.solo{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden;
+  box-shadow:var(--shadow);display:flex;flex-direction:column}
+.sbody{padding:.7rem .8rem .85rem;display:flex;flex-direction:column;flex:1}
+.sn{font-family:'Fraunces',serif;font-size:.92rem;line-height:1.18}
+.sc{font-size:.7rem;color:var(--ink-soft);margin-top:.12rem}
+.sp{font-family:'Fraunces',serif;font-size:1.02rem;margin-top:.4rem;margin-bottom:.55rem}
+.sadd{margin-top:auto;background:transparent;border:1.5px solid var(--ink);color:var(--ink);
+  font-size:.76rem;font-weight:500;padding:.5rem;border-radius:30px;transition:all .2s}
+.sadd:active{transform:scale(.97)}
+.sadd.added{background:var(--save);border-color:var(--save);color:#fff}
+
+/* CART BAR */
+.cartbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(62,42,46,.97);
+  backdrop-filter:blur(10px);color:#fff;transform:translateY(115%);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1);padding:.75rem .95rem;
+  display:flex;align-items:center;gap:.7rem;box-shadow:0 -6px 26px rgba(0,0,0,.22);
+  padding-bottom:calc(.75rem + env(safe-area-inset-bottom))}
+.cartbar.show{transform:translateY(0)}
+.cbinfo{flex:1;min-width:0}
+.cbcount{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--rose-soft)}
+.cbtotal{font-family:'Fraunces',serif;font-size:1.35rem;line-height:1.05}
+.cbtotal small{font-size:.68rem;color:#8FCFA8;margin-left:.35rem;font-family:'Jost'}
+.cbsend{background:var(--wa);color:#08331C;border:none;font-weight:600;padding:.8rem 1.1rem;border-radius:40px;
+  font-size:.86rem;display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;transition:transform .15s}
+.cbsend:active{transform:scale(.97)}
+
+/* MODAL */
+.mbg{position:fixed;inset:0;background:rgba(62,42,46,.5);z-index:80;opacity:0;pointer-events:none;
+  transition:opacity .3s;display:flex;align-items:flex-end;justify-content:center}
+.mbg.show{opacity:1;pointer-events:auto}
+.modal{background:var(--bg);width:100%;max-width:520px;max-height:90vh;overflow-y:auto;
+  border-radius:24px 24px 0 0;padding:1.4rem 1.2rem calc(1.2rem + env(safe-area-inset-bottom));
+  transform:translateY(30px);transition:transform .3s;position:relative;-webkit-overflow-scrolling:touch}
+.mbg.show .modal{transform:translateY(0)}
+.mclose{position:absolute;top:1rem;right:1.2rem;background:none;border:none;font-size:1.7rem;color:var(--ink-soft);line-height:1}
+.modal h3{font-size:1.3rem}
+.msub{color:var(--ink-soft);font-size:.82rem;margin-bottom:.9rem}
+.citem{display:flex;gap:.7rem;align-items:flex-start;padding:.7rem 0;border-bottom:1px solid var(--line)}
+.cithumb{width:50px;height:64px;border-radius:9px;overflow:hidden;flex-shrink:0;background:var(--bg-warm)}
+.ciinfo{flex:1;min-width:0}
+.ciname{font-family:'Fraunces',serif;font-size:.94rem;line-height:1.18}
+.cidetail{font-size:.72rem;color:var(--ink-soft);margin-top:.1rem;line-height:1.35}
+.qty{display:flex;align-items:center;gap:.35rem;margin-top:.4rem}
+.qty button{width:23px;height:23px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:.9rem;line-height:1;color:var(--ink)}
+.qty span{min-width:15px;text-align:center;font-size:.84rem}
+.ciremove{background:none;border:none;color:var(--ink-soft);font-size:.7rem;text-decoration:underline;margin-top:.25rem}
+.ciprice{text-align:right;flex-shrink:0}
+.ciprice .now{font-family:'Fraunces',serif;font-size:.96rem}
+.ciprice .old{font-size:.7rem;color:var(--ink-soft);text-decoration:line-through;display:block}
+
+/* UPSELL en carrito */
+.upsell{margin:1rem 0;border:1.5px dashed var(--rose-deep);border-radius:16px;padding:.9rem;
+  background:linear-gradient(180deg,var(--rose-soft),transparent)}
+.uhead{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--rose-deep);font-weight:600;
+  display:flex;align-items:center;gap:.35rem}
+.ubody{display:flex;gap:.7rem;margin-top:.7rem;align-items:center}
+.uthumb{width:58px;height:74px;border-radius:11px;overflow:hidden;flex-shrink:0;background:var(--bg-warm)}
+.uinfo{flex:1;min-width:0}
+.un{font-family:'Fraunces',serif;font-size:.98rem;line-height:1.15}
+.up{margin-top:.15rem;font-size:.82rem}
+.up b{color:var(--rose-deep);font-family:'Fraunces',serif;font-size:1.05rem}
+.up s{color:var(--ink-soft);font-size:.74rem;margin-left:.25rem}
+.uadd{width:100%;margin-top:.75rem;background:var(--rose-deep);color:#fff;border:none;font-weight:500;
+  padding:.72rem;border-radius:40px;font-size:.85rem;transition:transform .15s}
+.uadd:active{transform:scale(.98)}
+.uadd.added{background:var(--save)}
+.col-label{font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:.7rem 0 .4rem}
+.col-chips{display:flex;flex-wrap:wrap;gap:.4rem}
+.col-chip{font-size:.76rem;border:1.5px solid var(--line);background:#fff;color:var(--ink);
+  padding:.35rem .7rem;border-radius:30px;transition:all .18s}
+.col-chip:active{transform:scale(.96)}
+.col-chip.on{background:var(--rose-deep);color:#fff;border-color:var(--rose-deep)}
+
+/* oferta B: 3 opciones con pestañas */
+.oferta-b{margin:1rem 0;border:2px solid var(--rose-deep);border-radius:18px;padding:1rem;
+  background:linear-gradient(180deg,var(--rose-soft),#fff)}
+.of-titulo{font-size:.9rem;font-weight:600;color:var(--rose-deep);text-align:center;margin-bottom:.7rem;line-height:1.3}
+.oferta-tabs{display:flex;gap:.4rem;margin-bottom:.8rem}
+.of-tab{flex:1;background:#fff;border:1.5px solid var(--line);color:var(--ink);font-size:.82rem;font-weight:500;
+  padding:.55rem .3rem;border-radius:30px;transition:all .18s}
+.of-tab:active{transform:scale(.96)}
+.of-tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.oferta-b .upsell{margin:0;border:none;padding:0;background:none}
+
+/* regalo desbloqueado en carrito */
+.giftrow{margin:.9rem 0;padding:.8rem .9rem;border-radius:14px;background:var(--rose-soft);
+  font-size:.82rem;line-height:1.4;display:flex;gap:.5rem;align-items:flex-start}
+.giftrow .gr-ico{font-size:1.1rem}
+.giftrow b{color:var(--rose-deep)}
+
+.mtotal-old{text-align:right;color:var(--ink-soft);font-size:.8rem;margin-top:1rem}
+.mtotal-old s{text-decoration:line-through}
+.mtotal{display:flex;justify-content:space-between;align-items:baseline;margin:.15rem 0 .1rem;
+  font-family:'Fraunces',serif;font-size:1.3rem}
+.msave{color:var(--save);font-size:.84rem;text-align:right;margin-bottom:.9rem;font-weight:500}
+.msend{width:100%;background:var(--wa);color:#08331C;border:none;font-weight:600;padding:1rem;border-radius:40px;
+  font-size:1rem;display:flex;align-items:center;justify-content:center;gap:.5rem}
+.msend:active{transform:scale(.99)}
+.mempty{text-align:center;color:var(--ink-soft);padding:2.5rem 1rem}
+
+/* VISOR fullscreen */
+.viewer{position:fixed;inset:0;background:rgba(30,20,24,.95);z-index:100;opacity:0;pointer-events:none;
+  transition:opacity .3s;display:flex;align-items:center;justify-content:center;padding:.5rem}
+.viewer.show{opacity:1;pointer-events:auto}
+.viewer .vmedia{max-width:96vw;max-height:90vh;border-radius:14px;overflow:hidden}
+.viewer .vmedia img,.viewer .vmedia video{width:auto;height:auto;max-width:96vw;max-height:90vh;object-fit:contain}
+.vclose{position:absolute;top:calc(1rem + env(safe-area-inset-top));right:1.1rem;background:rgba(255,255,255,.14);
+  border:none;color:#fff;width:40px;height:40px;border-radius:50%;font-size:1.3rem;backdrop-filter:blur(6px)}
+
+footer{text-align:center;padding:2.4rem 1.2rem;color:var(--ink-soft);font-size:.78rem;
+  border-top:1px solid var(--line);margin-top:1.5rem}
+footer b{color:var(--ink);font-weight:500}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<script>
+/* ╔═══════════════════════════════════════════════════════════════════╗
+   ║  📝  BEMBÉ — AQUÍ EDITAS TODO (precios, textos, WhatsApp, fotos)   ║
+   ║  Este archivo NO se ejecuta. Se EDITA con VS Code o Bloc de notas  ║
+   ║  y se VE abriéndolo (doble clic) en el navegador.                 ║
+   ║  Reglas: texto entre "comillas" · números sin puntos (151000) ·   ║
+   ║  cada línea termina en coma · no borres { } ni [ ]                 ║
+   ╚═══════════════════════════════════════════════════════════════════╝ */
+
+const CONFIG = {
+  marca: "Bembé",
+  eslogan: "Sets en colores que nadie más tiene. Combínalos y paga menos.",
+  moneda: "$",
+  whatsapp: "573115665678",        // +57 311 566 5678
+  saludoPedido: "¡Hola Bembé! 💗 Quiero este pedido:",
+  barraTop: "Envío a todo el país · Paga contra entrega · Cambios fáciles",
+  tallaTexto: "Talla única",
+  regalos: {
+    activo: true,
+    // PDF 1: se regala al sumar la 2ª pieza (aceptar la 1ª oferta del carrito)
+    pdf1: "Guía práctica personalizada: cómo bajar o subir de peso paso a paso",
+    // PDF 2: se regala al sumar la 3ª pieza (aceptar la 2ª oferta encadenada)
+    pdf2: "Guía de entrenamiento basada en ciencia: glúteos y piernas — los ejercicios comprobados para crecer más rápido y con mejores resultados",
+  },
+};
+
+const IMG = "imagenes/";
+
+/* ─────────────────────────────────────────────────────────────────────
+   1️⃣  LOS 7 SETS
+   Precios EXACTOS del Excel (PVP conjunto con 12% dto y PVP suelto).
+   "ref" = código interno que viaja al mensaje de WhatsApp para que
+   reconozcas la prenda real de tu inventario Amorfit, aunque el nombre
+   visible sea de marca Bembé.
+   fotos: ya reordenadas para que la primera sea la de frente.
+   ───────────────────────────────────────────────────────────────────── */
+
+const SETS = [
+  {
+    id:"negro_push", nombre:"Set Bembé Noir", etiqueta:"MÁS VENDIDO",
+    topNombre:"Top", bottomNombre:"Legging", color:"Negro",
+    precioSet:102000, precioSuelto:114000,
+    refTop:"2041NEG · TOP TIPO BRASIER PREMIUM negro",
+    refBottom:"1063NEG · LEGGINS DOBLE PUSH PREMIUM negro",
+    fotos:["top-tipo-brasier-premium-leggins-doble-push-premium-1.webp","top-tipo-brasier-premium-leggins-doble-push-premium-2.webp"],
+    enterizo:"ent_choco", precioEnterizoTrio:71000,
+  },
+  {
+    id:"negro_buc", nombre:"Set Bembé Onyx", etiqueta:"",
+    topNombre:"Top", bottomNombre:"Legging", color:"Negro",
+    precioSet:99000, precioSuelto:111000,
+    refTop:"310NEG · TOP BUC LOVE MOTION negro",
+    refBottom:"608NEG · LEGGINS BUCOS LATERALES negro",
+    fotos:["top-buc-love-motion-negro-leggins-bucos-laterales-negro-1.webp","top-buc-love-motion-negro-leggins-bucos-laterales-negro-2.webp"],
+    enterizo:"ent_celeste", precioEnterizoTrio:83000,
+  },
+  {
+    id:"verano", nombre:"Set Bembé Brisa", etiqueta:"VERANO",
+    topNombre:"Top", bottomNombre:"Short", color:"Negro",
+    precioSet:80000, precioSuelto:89000,
+    refTop:"305NEGB · TOP SEAMLESS NAC negro/blanco",
+    refBottom:"212NEG · SHORT M.BUC LOVE MOTION negro",
+    fotos:["top-seamles-nac-negro-shorts-mbuc-love-motion-negro-1.webp","top-seamles-nac-negro-shorts-mbuc-love-motion-negro-2.webp"],
+    enterizo:"ent_elephant", precioEnterizoTrio:66000,
+  },
+  {
+    id:"morado", nombre:"Set Bembé Orquídea", etiqueta:"",
+    topNombre:"Camiseta", bottomNombre:"Legging", color:"Morado",
+    precioSet:106000, precioSuelto:118000,
+    refTop:"3043MSCN · CAMISETA LOVE MOTION morado oscuro/negro",
+    refBottom:"6005MSC · LEGGINS LOVE MOTION morado oscuro",
+    fotos:["camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-3.webp","camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-1.webp","camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-2.webp"],
+    enterizo:"ent_gris", precioEnterizoTrio:79000,
+  },
+  {
+    id:"barbie", nombre:"Set Bembé Rosa", etiqueta:"COLOR ÚNICO",
+    topNombre:"Camiseta", bottomNombre:"Short", color:"Rosado",
+    precioSet:83000, precioSuelto:93000,
+    refTop:"3043RSBA · CAMISETA LOVE MOTION rosado barbie/amarilla",
+    refBottom:"210RSB · SHORT DP LOVE MOTION rosado barbie",
+    fotos:["camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-5.webp","camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-1.webp","camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-2.webp","camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-3.webp","camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-4.webp"],
+    enterizo:"ent_vino", precioEnterizoTrio:66000,
+  },
+  {
+    id:"amarillo", nombre:"Set Bembé Sol", etiqueta:"COLOR ÚNICO",
+    topNombre:"Top", bottomNombre:"Short", color:"Amarillo",
+    precioSet:81000, precioSuelto:90000,
+    refTop:"310AMA · TOP BUC LOVE MOTION amarillo",
+    refBottom:"212AMA · SHORT M.BUC LOVE MOTION amarillo",
+    fotos:["top-buc-love-motion-amarilla-short-dp-love-motion-amarilla-2.webp","top-buc-love-motion-amarilla-short-dp-love-motion-amarilla-3.webp"],
+    enterizo:"ent_papyrus", precioEnterizoTrio:66000,
+  },
+  {
+    id:"mandarina", nombre:"Set Bembé Mandarina", etiqueta:"EDICIÓN LIMITADA",
+    topNombre:"Top", bottomNombre:"Short", color:"Naranja",
+    precioSet:81000, precioSuelto:91000,
+    refTop:"3052MAN · TOP GALLETA mandarina",
+    refBottom:"213MANA · SHORT 4 SES LOVE MOTION mandarina/azul bebé",
+    fotos:["top-galleta-mandarina-short-4-ses-love-motion-mandarina-2.webp","top-galleta-mandarina-short-4-ses-love-motion-mandarina-1.webp","top-galleta-mandarina-short-4-ses-love-motion-mandarina-3.webp"],
+    enterizo:"ent_largo", precioEnterizoTrio:87000,
+  },
+];
+
+/* ─────────────────────────────────────────────────────────────────────
+   2️⃣  ENTERIZOS — precios EXACTOS del Excel. Colores en lenguaje sencillo.
+   fotos reordenadas donde pediste (frente primero).
+   ───────────────────────────────────────────────────────────────────── */
+
+const ENTERIZOS = {
+  ent_choco:    { nombre:"Enterizo Bembé", color:"Chocolate", precio:79000,
+    ref:"6045CHOB · ENTERIZO CORTO HALT chocolate/ballerina",
+    fotos:["enterizo-corto-halt-chocolate-1.webp","enterizo-corto-halt-chocolate-2.webp"] },
+  ent_celeste:  { nombre:"Enterizo Bembé", color:"Azul Cielo", precio:93000,
+    ref:"6079CEL · ENTERIZO CORTO MC celeste",
+    fotos:["enterizo-corto-mc-celeste-1.webp","enterizo-corto-mc-celeste-2.webp","enterizo-corto-mc-celeste-3.webp","enterizo-corto-mc-celeste-4.webp","enterizo-corto-mc-celeste-5.webp"] },
+  ent_elephant: { nombre:"Enterizo Bembé", color:"Gris Topo", precio:73000,
+    ref:"6072ELEB · ENTERIZO CORTO SP TIRAS elephant/ballerina",
+    fotos:["enterizo-corto-sp-tiras-elephant-ballerina-1.webp","enterizo-corto-sp-tiras-elephant-ballerina-2.webp"] },
+  ent_gris:     { nombre:"Enterizo Bembé", color:"Gris Claro", precio:88000,
+    ref:"6044GCLM · ENTERIZO CORTO HALTER gris claro/marfil",
+    fotos:["enterizo-corto-halter-claro-2.webp","enterizo-corto-halter-claro-1.webp","enterizo-corto-halter-claro-3.webp"] },
+  ent_vino:     { nombre:"Enterizo Bembé", color:"Vino Tinto", precio:73000,
+    ref:"6072VINA · ENTERIZO CORTO SP TIRAS vino/azul claro",
+    fotos:["enterizo-corto-sp-tiras-vino-azul-claro-1.webp","enterizo-corto-sp-tiras-vino-azul-claro-2.webp"] },
+  ent_papyrus:  { nombre:"Enterizo Bembé", color:"Lila", precio:73000,
+    ref:"6072PAPL · ENTERIZO CORTO SP TIRAS papyrus/lila",
+    fotos:["enterizo-corto-sp-tiras-papyrus-2.webp","enterizo-corto-sp-tiras-papyrus-1.webp","enterizo-corto-sp-tiras-papyrus-3.webp"] },
+  ent_largo:    { nombre:"Enterizo Largo Bembé", color:"Azul Cielo", precio:97000,
+    ref:"6033CELW · ENTERIZO LARGO HALT celeste/whisper",
+    fotos:["enterizo-largo-halt-celeste-whisper-1.webp","enterizo-largo-halt-celeste-whisper-2.webp"] },
+  ent_beige:    { nombre:"Enterizo Bembé", color:"Beige", precio:85000,
+    ref:"5693BEIB · ENTERIZO CORTO MC beige/blanco",
+    fotos:["enterizo-corto-mc-beige-2.webp","enterizo-corto-mc-beige-1.webp","enterizo-corto-mc-beige-3.webp"] },
+  ent_negro:    { nombre:"Enterizo Bembé", color:"Negro", precio:93000,
+    ref:"6079NEG · ENTERIZO CORTO MC negro",
+    fotos:["enterizo-corto-mc-negro-2.webp","enterizo-corto-mc-negro-1.webp","enterizo-corto-mc-negro-3.webp"] },
+};
+const DESCUENTO_ENTERIZO = 8000;
+
+/* ─────────────────────────────────────────────────────────────────────
+   3️⃣  ARMA TU SET — Top Negro + legging a elegir. 12% dto (deja ~28% margen,
+   ~$45-48k de utilidad por venta: rentable). Ahorro mostrado EN PESOS.
+   Foto del top corregida (frente, sin zoom excesivo).
+   ───────────────────────────────────────────────────────────────────── */
+
+const ARMA_SET = {
+  activo:true,
+  titulo:"Arma tu set con el Top Negro",
+  subtitulo:"El mismo top negro que amas, combínalo con el legging o short que quieras. Elige abajo y llévate tu descuento.",
+  topFijo:"Top Negro",
+  refTop:"310NEG · TOP BUC LOVE MOTION negro",
+  opciones:[
+    { id:"tbuc_negro", bottom:"Legging Negro", precioSuelto:111000, precioSet:99000,
+      refBottom:"608NEG · LEGGINS BUCOS LATERALES negro",
+      fotos:["top-buc-love-motion-negro-leggins-bucos-laterales-negro-2.webp","top-buc-love-motion-negro-leggins-bucos-laterales-negro-1.webp"] },
+    { id:"tbuc_azul", bottom:"Legging Azul Cielo", precioSuelto:111000, precioSet:99000,
+      refBottom:"608AZB · LEGGINS BUCOS LATERALES azul bb",
+      fotos:["top-buc-love-motion-negro-leggins-bucos-laterales-azul-bb-1.webp","top-buc-love-motion-negro-leggins-bucos-laterales-azul-bb-2.webp"] },
+    { id:"tbuc_papyrus", bottom:"Legging Beige Arena", precioSuelto:115000, precioSet:103000,
+      refBottom:"1063PAP · LEGGINS DOBLE PUSH PREMIUM papyrus",
+      fotos:["top-buc-love-motion-negro-leggins-doble-push-premium-papyrus-1.webp","top-buc-love-motion-negro-leggins-doble-push-premium-papyrus-2.webp"] },
+    { id:"tbuc_verde", bottom:"Legging Verde Oliva", precioSuelto:115000, precioSet:103000,
+      refBottom:"1063VSC · LEGGINS DOBLE PUSH PREMIUM verde seco",
+      fotos:["top-buc-love-motion-negro-leggins-doble-push-premium-verde-seco-1.webp","top-buc-love-motion-negro-leggins-doble-push-premium-verde-seco-2.webp"] },
+  ],
+  enterizo:"ent_negro", precioEnterizoTrio:83000,
+};
+
+const COMBOS_EXTRA = [];
+
+/* ─────────────────────────────────────────────────────────────────────
+   4️⃣  INVENTARIO SUELTO — TODAS las piezas a precio individual del Excel.
+   Las que no tienen foto propia usan la del set/combo donde aparecen.
+   ───────────────────────────────────────────────────────────────────── */
+
+const SUELTOS = [
+  // TOPS Y CAMISETAS (frente + espalda)
+  { nombre:"Top", color:"Negro", precio:43000, ref:"2041NEG · TOP TIPO BRASIER PREMIUM negro",
+    fotos:["top-tipo-brasier-premium-leggins-doble-push-premium-1.webp","top-tipo-brasier-premium-leggins-doble-push-premium-2.webp"] },
+  { nombre:"Top", color:"Negro/Blanco", precio:43000, ref:"305NEGB · TOP SEAMLESS NAC negro/blanco",
+    fotos:["top-seamles-nac-negro-shorts-mbuc-love-motion-negro-1.webp","top-seamles-nac-negro-shorts-mbuc-love-motion-negro-2.webp"] },
+  { nombre:"Top", color:"Negro", precio:44000, ref:"310NEG · TOP BUC LOVE MOTION negro",
+    fotos:["top-buc-love-motion-negro-leggins-bucos-laterales-negro-2.webp","top-buc-love-motion-negro-leggins-bucos-laterales-negro-1.webp"] },
+  { nombre:"Top", color:"Amarillo", precio:44000, ref:"310AMA · TOP BUC LOVE MOTION amarillo",
+    fotos:["top-buc-love-motion-amarilla-short-dp-love-motion-amarilla-2.webp","top-buc-love-motion-amarilla-short-dp-love-motion-amarilla-3.webp"] },
+  { nombre:"Top", color:"Naranja", precio:43000, ref:"3052MAN · TOP GALLETA mandarina",
+    fotos:["top-galleta-mandarina-short-4-ses-love-motion-mandarina-2.webp","top-galleta-mandarina-short-4-ses-love-motion-mandarina-1.webp"] },
+  { nombre:"Camiseta", color:"Morado", precio:49000, ref:"3043MSCN · CAMISETA LOVE MOTION morado oscuro/negro",
+    fotos:["camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-3.webp","camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-1.webp"] },
+  { nombre:"Camiseta", color:"Rosado", precio:49000, ref:"3043RSBA · CAMISETA LOVE MOTION rosado barbie/amarilla",
+    fotos:["camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-5.webp","camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-1.webp"] },
+  // LEGGINGS Y SHORTS (frente + espalda)
+  { nombre:"Legging", color:"Negro", precio:71000, ref:"1063NEG · LEGGINS DOBLE PUSH PREMIUM negro",
+    fotos:["top-tipo-brasier-premium-leggins-doble-push-premium-2.webp","top-tipo-brasier-premium-leggins-doble-push-premium-1.webp"] },
+  { nombre:"Legging", color:"Negro", precio:67000, ref:"608NEG · LEGGINS BUCOS LATERALES negro",
+    fotos:["top-buc-love-motion-negro-leggins-bucos-laterales-negro-1.webp","top-buc-love-motion-negro-leggins-bucos-laterales-negro-2.webp"] },
+  { nombre:"Legging", color:"Morado", precio:69000, ref:"6005MSC · LEGGINS LOVE MOTION morado oscuro",
+    fotos:["camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-2.webp","camiseta-love-motion-morado-oscuro-leggins-love-motion-morado-oscuro-1.webp"] },
+  { nombre:"Legging", color:"Beige Arena", precio:71000, ref:"1063PAP · LEGGINS DOBLE PUSH PREMIUM papyrus",
+    fotos:["top-buc-love-motion-negro-leggins-doble-push-premium-papyrus-2.webp","top-buc-love-motion-negro-leggins-doble-push-premium-papyrus-1.webp"] },
+  { nombre:"Legging", color:"Verde Oliva", precio:71000, ref:"1063VSC · LEGGINS DOBLE PUSH PREMIUM verde seco",
+    fotos:["top-buc-love-motion-negro-leggins-doble-push-premium-verde-seco-2.webp","top-buc-love-motion-negro-leggins-doble-push-premium-verde-seco-1.webp"] },
+  { nombre:"Legging", color:"Azul Cielo", precio:67000, ref:"608AZB · LEGGINS BUCOS LATERALES azul bb",
+    fotos:["top-buc-love-motion-negro-leggins-bucos-laterales-azul-bb-2.webp","top-buc-love-motion-negro-leggins-bucos-laterales-azul-bb-1.webp"] },
+  { nombre:"Short", color:"Negro", precio:46000, ref:"212NEG · SHORT M.BUC LOVE MOTION negro",
+    fotos:["top-seamles-nac-negro-shorts-mbuc-love-motion-negro-2.webp","top-seamles-nac-negro-shorts-mbuc-love-motion-negro-1.webp"] },
+  { nombre:"Short", color:"Rosado", precio:44000, ref:"210RSB · SHORT DP LOVE MOTION rosado barbie",
+    fotos:["camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-3.webp","camiseta-love-motion-rosado-barbie-short-dp-love-motion-rosado-barbie-4.webp"] },
+  { nombre:"Short", color:"Amarillo", precio:46000, ref:"212AMA · SHORT M.BUC LOVE MOTION amarillo",
+    fotos:["top-buc-love-motion-amarilla-short-dp-love-motion-amarilla-3.webp","top-buc-love-motion-amarilla-short-dp-love-motion-amarilla-2.webp"] },
+  { nombre:"Short", color:"Naranja/Azul", precio:48000, ref:"213MANA · SHORT 4 SES LOVE MOTION mandarina/azul bebé",
+    fotos:["top-galleta-mandarina-short-4-ses-love-motion-mandarina-3.webp","top-galleta-mandarina-short-4-ses-love-motion-mandarina-1.webp"] },
+  // ENTERIZOS (frente + espalda)
+  { nombre:"Enterizo", color:"Chocolate", precio:79000, ref:"6045CHOB · ENTERIZO CORTO HALT chocolate/ballerina",
+    fotos:["enterizo-corto-halt-chocolate-1.webp","enterizo-corto-halt-chocolate-2.webp"] },
+  { nombre:"Enterizo", color:"Azul Cielo", precio:93000, ref:"6079CEL · ENTERIZO CORTO MC celeste",
+    fotos:["enterizo-corto-mc-celeste-1.webp","enterizo-corto-mc-celeste-2.webp"] },
+  { nombre:"Enterizo", color:"Gris Topo", precio:73000, ref:"6072ELEB · ENTERIZO CORTO SP TIRAS elephant/ballerina",
+    fotos:["enterizo-corto-sp-tiras-elephant-ballerina-1.webp","enterizo-corto-sp-tiras-elephant-ballerina-2.webp"] },
+  { nombre:"Enterizo", color:"Gris Claro", precio:88000, ref:"6044GCLM · ENTERIZO CORTO HALTER gris claro/marfil",
+    fotos:["enterizo-corto-halter-claro-2.webp","enterizo-corto-halter-claro-1.webp"] },
+  { nombre:"Enterizo", color:"Vino Tinto", precio:73000, ref:"6072VINA · ENTERIZO CORTO SP TIRAS vino/azul claro",
+    fotos:["enterizo-corto-sp-tiras-vino-azul-claro-1.webp","enterizo-corto-sp-tiras-vino-azul-claro-2.webp"] },
+  { nombre:"Enterizo", color:"Lila", precio:73000, ref:"6072PAPL · ENTERIZO CORTO SP TIRAS papyrus/lila",
+    fotos:["enterizo-corto-sp-tiras-papyrus-2.webp","enterizo-corto-sp-tiras-papyrus-1.webp"] },
+  { nombre:"Enterizo Largo", color:"Azul Cielo", precio:97000, ref:"6033CELW · ENTERIZO LARGO HALT celeste/whisper",
+    fotos:["enterizo-largo-halt-celeste-whisper-1.webp","enterizo-largo-halt-celeste-whisper-2.webp"] },
+  { nombre:"Enterizo", color:"Beige", precio:85000, ref:"5693BEIB · ENTERIZO CORTO MC beige/blanco",
+    fotos:["enterizo-corto-mc-beige-2.webp","enterizo-corto-mc-beige-1.webp"] },
+  { nombre:"Enterizo", color:"Negro", precio:93000, ref:"6079NEG · ENTERIZO CORTO MC negro",
+    fotos:["enterizo-corto-mc-negro-2.webp","enterizo-corto-mc-negro-1.webp"] },
+];
+
+/* ╔═══════════════════════════════════════════════════════════════════╗
+   ║  ⚙️  MOTOR — de aquí para abajo NO edites nada                     ║
+   ╚═══════════════════════════════════════════════════════════════════╝ */
+const fmt = n => CONFIG.moneda + Math.round(n).toLocaleString('es-CO');
+const src = f => IMG + f;
+let uid = 0;
+
+function galleryHTML(fotos, video, label, cls){
+  const gid = 'g'+(uid++);
+  const f = (fotos||[]).filter(Boolean);
+  let items = f.length ? f.map(x=>({t:'img',s:x})) : [{t:'ph'}];
+  let slides = items.map((it,i)=>{
+    if(it.t==='ph') return `<div class="slide active"><div class="ph">📷<br>${label}</div></div>`;
+    // 1ª foto: carga normal (lazy nativo). Resto: data-src, se carga al navegar o al acercarse.
+    if(i===0){
+      return `<div class="slide active" data-i="0"><img src="${src(it.s)}" alt="${label}" loading="lazy" decoding="async" onerror="this.parentElement.innerHTML='<div class=&quot;ph&quot;>📷<br>${label}</div>'"></div>`;
+    }
+    return `<div class="slide" data-i="${i}"><img data-src="${src(it.s)}" alt="${label}" decoding="async" onerror="this.parentElement.innerHTML='<div class=&quot;ph&quot;>📷<br>${label}</div>'"></div>`;
+  }).join('');
+  const n = items.length;
+  let dots = n>1 ? `<div class="gdots">${items.map((_,i)=>`<i class="${i===0?'on':''}"></i>`).join('')}</div>` : '';
+  let nav = n>1 ? `<button class="gnav prev" onclick="step('${gid}',-1)" aria-label="anterior"></button><button class="gnav next" onclick="step('${gid}',1)" aria-label="siguiente"></button>` : '';
+  return `<div class="gallery ${cls||''}" id="${gid}" data-n="${n}" data-c="0">${slides}${nav}${dots}</div>`;
+}
+// carga la imagen de un slide si aún no está cargada
+function loadSlide(slide){
+  if(!slide)return;
+  const img=slide.querySelector('img[data-src]');
+  if(img){img.src=img.dataset.src;img.removeAttribute('data-src');}
+}
+function step(gid,dir){
+  const g=document.getElementById(gid); if(!g)return;
+  const n=+g.dataset.n; if(n<2)return;
+  const c=(+g.dataset.c+dir+n)%n;
+  const slides=g.querySelectorAll('.slide');
+  loadSlide(slides[c]);           // carga la foto destino si aún no está
+  slides.forEach((s,i)=>s.classList.toggle('active',i===c));
+  g.querySelectorAll('.gdots i').forEach((d,i)=>d.classList.toggle('on',i===c));
+  g.dataset.c=c;
+}
+// hover en desktop: avanza a la siguiente foto (estilo Zara/Massimo Dutti)
+// swipe + auto-avance en móvil
+function enableGalleries(){
+  document.querySelectorAll('.gallery[data-n]').forEach(g=>{
+    if(g.dataset.init)return; g.dataset.init=1;
+    const n=+g.dataset.n; if(n<2)return;
+    // desktop hover: precarga la 2ª al entrar el mouse
+    if(window.matchMedia('(hover:hover)').matches){
+      g.addEventListener('mouseenter',()=>step(g.id,1));
+      g.addEventListener('mouseleave',()=>{ const cur=+g.dataset.c; if(cur!==0) step(g.id,-cur); });
+    }
+    let x0=null;
+    g.addEventListener('touchstart',e=>{x0=e.touches[0].clientX;},{passive:true});
+    g.addEventListener('touchend',e=>{
+      if(x0===null)return; const dx=e.changedTouches[0].clientX-x0;
+      if(Math.abs(dx)>35) step(g.id, dx<0?1:-1); x0=null;
+    },{passive:true});
+  });
+}
+// auto-avance: solo la galería MÁS centrada en pantalla, cada 6s (no todas a la vez)
+let autoTimer=null;
+function startAuto(){
+  if(window.matchMedia('(hover:hover)').matches) return;
+  if(autoTimer) clearInterval(autoTimer);
+  autoTimer=setInterval(()=>{
+    let best=null,bestDist=1e9; const mid=window.innerHeight/2;
+    document.querySelectorAll('.gallery[data-n]').forEach(g=>{
+      if(+g.dataset.n<2)return;
+      const r=g.getBoundingClientRect();
+      if(r.bottom<0||r.top>window.innerHeight)return;
+      const d=Math.abs((r.top+r.bottom)/2-mid);
+      if(d<bestDist){bestDist=d;best=g;}
+    });
+    if(best) step(best.id,1);
+  },6000);
+}
+
+/* ---------- RENDER SETS ---------- */
+function badgeCls(t){return t==='COLOR ÚNICO'?'gold':t==='EDICIÓN LIMITADA'?'mauve':'';}
+function renderSets(){
+  const all=[...SETS];
+  document.getElementById('sets-grid').innerHTML = all.map(s=>{
+    const ahorro=s.precioSuelto-s.precioSet;
+    const badge=s.etiqueta?`<div class="badge ${badgeCls(s.etiqueta)}">${s.etiqueta}</div>`:'';
+    return `<article class="card">${badge}
+      ${galleryHTML(s.fotos,'',s.nombre)}
+      <div class="cbody">
+        <div class="cname">${s.nombre}</div>
+        <div class="cpieces">${s.topNombre} + ${s.bottomNombre} · ${s.color}</div>
+        <span class="talla">${CONFIG.tallaTexto}</span>
+        <div class="prow"><span class="pnow">${fmt(s.precioSet)}</span><span class="pold">${fmt(s.precioSuelto)}</span><span class="psave">Ahorras ${fmt(ahorro)}</span></div>
+        <button class="badd" id="badd-${s.id}" onclick="addSet('${s.id}')">Añadir set · ${fmt(s.precioSet)}</button>
+      </div></article>`;
+  }).join('');
+}
+
+/* ---------- RENDER ENTERIZOS ---------- */
+function renderEnterizos(){
+  document.getElementById('ent-grid').innerHTML = Object.entries(ENTERIZOS).map(([id,e])=>{
+    return `<article class="card">
+      ${galleryHTML(e.fotos,'',e.nombre)}
+      <div class="cbody">
+        <div class="cname">${e.nombre}</div>
+        <div class="cpieces">${e.color}</div>
+        <span class="talla">${CONFIG.tallaTexto}</span>
+        <div class="prow"><span class="pnow">${fmt(e.precio)}</span></div>
+        <button class="badd" id="badd-ent-${id}" onclick="addEnterizo('${id}')">Añadir · ${fmt(e.precio)}</button>
+      </div></article>`;
+  }).join('');
+}
+
+/* ---------- ARMA TU SET ---------- */
+let armaSel=0;
+function renderArma(){
+  if(!ARMA_SET.activo){document.getElementById('arma-section').style.display='none';document.getElementById('arma-wrap').style.display='none';return;}
+  const o=ARMA_SET.opciones[armaSel];
+  const ahorro=o.precioSuelto-o.precioSet;
+  document.getElementById('arma-wrap').innerHTML=`<div class="arma-inner">
+    ${galleryHTML(o.fotos,'',ARMA_SET.topFijo+' + '+o.bottom,'arma-gallery')}
+    <div class="arma-body">
+      <div class="cname">${ARMA_SET.topFijo}</div>
+      <div class="cpieces">+ ${o.bottom}</div>
+      <span class="talla">${CONFIG.tallaTexto}</span>
+      <div class="arma-opts"><div class="lbl">Elige el bottom</div><div class="opt-chips">
+        ${ARMA_SET.opciones.map((op,i)=>{
+          const ah=op.precioSuelto-op.precioSet;
+          return `<button class="opt-chip ${i===armaSel?'on':''}" onclick="pickArma(${i})">
+            <span class="oc-radio"></span>
+            <span class="oc-name">${op.bottom}</span>
+            <span class="oc-price"><b>${fmt(op.precioSet)}</b><s>${fmt(op.precioSuelto)}</s></span>
+          </button>`;
+        }).join('')}
+      </div></div>
+      <div class="prow"><span class="pnow">${fmt(o.precioSet)}</span><span class="pold">${fmt(o.precioSuelto)}</span><span class="psave">Ahorras ${fmt(ahorro)}</span></div>
+      <button class="badd" id="badd-arma" onclick="addArma()">Añadir set · ${fmt(o.precioSet)}</button>
+    </div></div>`;
+  enableGalleries();
+}
+function pickArma(i){armaSel=i;renderArma();}
+
+/* ---------- SUELTOS ---------- */
+function renderSueltos(){
+  document.getElementById('solo-grid').innerHTML = SUELTOS.map((p,i)=>{
+    return `<article class="solo">
+      ${galleryHTML(p.fotos,'',p.nombre)}
+      <div class="sbody">
+        <div class="sn">${p.nombre}</div>
+        <div class="sc">${p.color} · ${CONFIG.tallaTexto}</div>
+        <div class="sp">${fmt(p.precio)}</div>
+        <button class="sadd" id="sadd-${i}" onclick="addSuelto(${i})">Añadir</button>
+      </div></article>`;
+  }).join('');
+}
+
+/* ---------- CARRITO ---------- */
+let cart={};
+function addSet(id){
+  const s=SETS.find(x=>x.id===id);
+  const line='set_'+id;
+  if(cart[line])cart[line].qty++;
+  else cart[line]={nombre:s.nombre,detalle:`${s.topNombre} + ${s.bottomNombre} · ${s.color}`,
+    precio:s.precioSet,ref:s.precioSuelto,qty:1,tipo:'set',thumb:s.fotos[0]||'',setRef:id,
+    codigo:`${s.refTop} + ${s.refBottom}`};
+  flash('badd-'+id,'¡Añadido! ✓');updateCart();
+}
+function addArma(){
+  const o=ARMA_SET.opciones[armaSel];
+  const line='arma_'+o.id;
+  if(cart[line])cart[line].qty++;
+  else cart[line]={nombre:'Set '+ARMA_SET.topFijo,detalle:`+ ${o.bottom}`,
+    precio:o.precioSet,ref:o.precioSuelto,qty:1,tipo:'set',thumb:o.fotos[0]||'',armaRef:true,
+    codigo:`${ARMA_SET.refTop} + ${o.refBottom}`};
+  flash('badd-arma','¡Añadido! ✓');updateCart();
+}
+function addEnterizo(id){
+  const e=ENTERIZOS[id];
+  const line='ent_'+id;
+  if(cart[line])cart[line].qty++;
+  else cart[line]={nombre:e.nombre+' · '+e.color,detalle:'Enterizo',
+    precio:e.precio,ref:e.precio,qty:1,tipo:'enterizo',thumb:e.fotos[0]||'',codigo:e.ref};
+  flash('badd-ent-'+id,'✓');updateCart();
+}
+function addSuelto(i){
+  const p=SUELTOS[i];
+  const line='solo_'+i;
+  if(cart[line])cart[line].qty++;
+  else cart[line]={nombre:p.nombre+' · '+p.color,detalle:'Pieza individual',
+    precio:p.precio,ref:p.precio,qty:1,tipo:'solo',thumb:(p.fotos&&p.fotos[0])||'',codigo:p.ref};
+  flash('sadd-'+i,'✓');updateCart();
+}
+function flash(id,txt){const b=document.getElementById(id);if(!b)return;const o=b.textContent;b.textContent=txt;b.classList.add('added');setTimeout(()=>{b.textContent=o;b.classList.remove('added')},1200);}
+function changeQty(l,d){if(!cart[l])return;cart[l].qty+=d;if(cart[l].qty<=0)delete cart[l];updateCart();renderCartItems();}
+function removeLine(l){delete cart[l];updateCart();renderCartItems();}
+
+function totals(){let t=0,r=0,c=0;for(const k in cart){t+=cart[k].precio*cart[k].qty;r+=cart[k].ref*cart[k].qty;c+=cart[k].qty;}return{total:t,ref:r,save:r-t,count:c};}
+function updateCart(){
+  const t=totals();
+  document.getElementById('hdr-count').textContent=t.count;
+  document.getElementById('cb-count').textContent=t.count;
+  document.getElementById('cb-total').innerHTML=fmt(t.total)+(t.save>0?`<small>ahorras ${fmt(t.save)}</small>`:'');
+  document.getElementById('cartbar').classList.toggle('show',t.count>0);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   OFERTAS ENCADENADAS + PDFs
+   - count 1: oferta A (sin PDF). Ofrece 2º producto.
+   - count 2: desbloquea PDF #1 + oferta B (3 opciones + color). Ofrece 3º.
+   - count 3+: desbloquea PDF #2. Sin más ofertas de PDF.
+   ══════════════════════════════════════════════════════════════════ */
+let upsellPick=null;      // enterizo elegido
+let upsellSetPick=null;   // set elegido
+let upsellArmaPick=0;     // opción de arma elegida
+let ofertaTipo='enterizo';// qué tipo se muestra en la oferta B: 'enterizo' | 'set' | 'arma'
+
+function renderUpsell(){
+  const box=document.getElementById('upsell-box');
+  const items=Object.values(cart);
+  const count=totals().count;
+  if(!items.length){box.innerHTML='';return;}
+
+  const tieneSet=items.some(i=>i.tipo==='set');
+  const tieneEnt=items.some(i=>i.tipo==='enterizo'||i.tipo==='trio');
+
+  // ---- count >= 3: no más ofertas de PDF (ya desbloqueó ambos) ----
+  if(count>=3){ box.innerHTML=''; return; }
+
+  // ---- count == 1: OFERTA A (aún sin PDF) ----
+  if(count===1){
+    // si tiene set -> ofrece enterizo; si tiene enterizo/solo -> ofrece set
+    if(tieneSet && !tieneEnt){
+      box.innerHTML = ofertaEnterizoHTML('Completa tu look — súmalo con '+fmt(DESCUENTO_ENTERIZO)+' menos', false);
+    } else {
+      box.innerHTML = ofertaSetHTML('¿Le sumas un set? Combina y ahorra', false);
+    }
+    enableGalleries(); return;
+  }
+
+  // ---- count == 2: OFERTA B (3 opciones a elegir) + nota de PDF #2 ----
+  box.innerHTML = ofertaTripleHTML();
+  enableGalleries();
+}
+
+/* Oferta de enterizo (con selector de color) */
+function ofertaEnterizoHTML(titulo, esTriple){
+  const setItem=Object.values(cart).find(i=>i.tipo==='set'&&i.setRef);
+  let entId=ARMA_SET.enterizo;
+  if(setItem){const s=SETS.find(x=>x.id===setItem.setRef);if(s)entId=s.enterizo;}
+  if(!upsellPick||!ENTERIZOS[upsellPick])upsellPick=entId;
+  const e=ENTERIZOS[upsellPick];
+  const precioT=e.precio-DESCUENTO_ENTERIZO;
+  const chips=Object.entries(ENTERIZOS).map(([id,en])=>`<button class="col-chip ${id===upsellPick?'on':''}" onclick="pickUpsell('${id}')">${en.color}</button>`).join('');
+  return `<div class="upsell">
+    <div class="uhead">💗 ${titulo}</div>
+    <div class="ubody">
+      <div class="uthumb">${galleryHTML(e.fotos.slice(0,1),'',e.nombre)}</div>
+      <div class="uinfo"><div class="un">${e.nombre} · ${e.color}</div><div class="up"><b>${fmt(precioT)}</b><s>${fmt(e.precio)}</s></div></div>
+    </div>
+    <div class="col-label">Elige color del enterizo</div>
+    <div class="col-chips">${chips}</div>
+    <button class="uadd" onclick="addUpsellEnt()">+ Sumar enterizo · ${fmt(precioT)}</button>
+  </div>`;
+}
+
+/* Oferta de set (con selector de cuál set) */
+function ofertaSetHTML(titulo, esTriple){
+  if(!upsellSetPick)upsellSetPick=SETS[0].id;
+  const s=SETS.find(x=>x.id===upsellSetPick)||SETS[0];
+  const ahorro=s.precioSuelto-s.precioSet;
+  const chips=SETS.map(st=>`<button class="col-chip ${st.id===upsellSetPick?'on':''}" onclick="pickUpsellSet('${st.id}')">${st.nombre.replace('Set Bembé ','')} · ${st.color}</button>`).join('');
+  return `<div class="upsell">
+    <div class="uhead">💗 ${titulo} · Ahorra ${fmt(ahorro)}</div>
+    <div class="ubody">
+      <div class="uthumb">${galleryHTML(s.fotos.slice(0,1),'',s.nombre)}</div>
+      <div class="uinfo"><div class="un">${s.nombre} · ${s.color}</div><div class="up"><b>${fmt(s.precioSet)}</b><s>${fmt(s.precioSuelto)}</s></div></div>
+    </div>
+    <div class="col-label">Elige el set</div>
+    <div class="col-chips">${chips}</div>
+    <button class="uadd" onclick="addUpsellSet()">+ Añadir set · ${fmt(s.precioSet)}</button>
+  </div>`;
+}
+
+/* Oferta de arma-tu-set (top negro + legging a elegir) */
+function ofertaArmaHTML(){
+  const o=ARMA_SET.opciones[upsellArmaPick];
+  const ahorro=o.precioSuelto-o.precioSet;
+  const chips=ARMA_SET.opciones.map((op,i)=>`<button class="col-chip ${i===upsellArmaPick?'on':''}" onclick="pickUpsellArma(${i})">${op.bottom.replace('Legging ','')}</button>`).join('');
+  return `<div class="upsell">
+    <div class="uhead">💗 Arma tu set · Top Negro + el legging que elijas · Ahorra ${fmt(ahorro)}</div>
+    <div class="ubody">
+      <div class="uthumb">${galleryHTML(o.fotos.slice(0,1),'',ARMA_SET.topFijo)}</div>
+      <div class="uinfo"><div class="un">${ARMA_SET.topFijo} + ${o.bottom}</div><div class="up"><b>${fmt(o.precioSet)}</b><s>${fmt(o.precioSuelto)}</s></div></div>
+    </div>
+    <div class="col-label">Elige el legging</div>
+    <div class="col-chips">${chips}</div>
+    <button class="uadd" onclick="addUpsellArma()">+ Añadir set · ${fmt(o.precioSet)}</button>
+  </div>`;
+}
+
+/* OFERTA B: el cliente elige entre las 3 opciones (set / enterizo / arma) */
+function ofertaTripleHTML(){
+  const tabs=`<div class="oferta-tabs">
+    <button class="of-tab ${ofertaTipo==='enterizo'?'on':''}" onclick="setOferta('enterizo')">Enterizo</button>
+    <button class="of-tab ${ofertaTipo==='set'?'on':''}" onclick="setOferta('set')">Set</button>
+    <button class="of-tab ${ofertaTipo==='arma'?'on':''}" onclick="setOferta('arma')">Ármalo tú</button>
+  </div>`;
+  let cuerpo='';
+  if(ofertaTipo==='enterizo') cuerpo=ofertaEnterizoHTML('Suma una 3ª pieza y llévate tu 2ª guía gratis 🎁',true);
+  else if(ofertaTipo==='set') cuerpo=ofertaSetHTML('Suma un set y llévate tu 2ª guía gratis 🎁',true);
+  else cuerpo=ofertaArmaHTML();
+  return `<div class="oferta-b">
+    <div class="of-titulo">🎁 Elige tu 3ª pieza y desbloquea tu 2ª guía gratis</div>
+    ${tabs}
+    ${cuerpo}
+  </div>`;
+}
+function setOferta(t){ofertaTipo=t;renderCartItems();}
+
+function pickUpsell(id){upsellPick=id;renderCartItems();}
+function pickUpsellSet(id){upsellSetPick=id;renderCartItems();}
+function pickUpsellArma(i){upsellArmaPick=i;renderCartItems();}
+
+function addUpsellEnt(){
+  const e=ENTERIZOS[upsellPick];
+  const precioT=e.precio-DESCUENTO_ENTERIZO;
+  const line='trio_'+upsellPick;
+  if(cart[line])cart[line].qty++;
+  else cart[line]={nombre:e.nombre+' · '+e.color,detalle:'Enterizo · precio especial',
+    precio:precioT,ref:e.precio,qty:1,tipo:'trio',thumb:e.fotos[0]||'',codigo:e.ref};
+  updateCart();renderCartItems();
+}
+function addUpsellSet(){
+  const s=SETS.find(x=>x.id===upsellSetPick)||SETS[0];
+  addSet(s.id);renderCartItems();
+}
+function addUpsellArma(){
+  const o=ARMA_SET.opciones[upsellArmaPick];
+  const line='arma_'+o.id;
+  if(cart[line])cart[line].qty++;
+  else cart[line]={nombre:'Set '+ARMA_SET.topFijo,detalle:`+ ${o.bottom}`,
+    precio:o.precioSet,ref:o.precioSuelto,qty:1,tipo:'set',thumb:o.fotos[0]||'',armaRef:true,
+    codigo:`${ARMA_SET.refTop} + ${o.refBottom}`};
+  updateCart();renderCartItems();
+}
+
+/* regalos desbloqueados por # de piezas: 2 pzas -> PDF1, 3+ pzas -> PDF1+PDF2 */
+function giftHTML(count){
+  if(!CONFIG.regalos.activo||count<2)return '';
+  if(count===2){
+    return `<div class="giftrow"><span class="gr-ico">🎁</span><div><b>¡Guía desbloqueada!</b> ${CONFIG.regalos.pdf1}<br><span style="color:var(--ink-soft)">Suma una 3ª pieza y desbloqueas tu 2ª guía 🔥</span></div></div>`;
+  }
+  return `<div class="giftrow"><span class="gr-ico">🎁</span><div><b>¡2 guías desbloqueadas!</b><br>1. ${CONFIG.regalos.pdf1}<br>2. ${CONFIG.regalos.pdf2}</div></div>`;
+}
+
+function thumb(it){return it.thumb?`<img src="${src(it.thumb)}" onerror="this.style.display='none'">`:'';}
+function renderCartItems(){
+  const box=document.getElementById('cart-items');
+  const keys=Object.keys(cart);
+  if(!keys.length){box.innerHTML='<div class="mempty">Tu bolsa está vacía 💗<br>Añade un set para empezar</div>';}
+  else{
+    box.innerHTML=keys.map(l=>{const it=cart[l];const old=it.ref>it.precio;
+      return `<div class="citem"><div class="cithumb">${thumb(it)}</div>
+        <div class="ciinfo"><div class="ciname">${it.nombre}</div><div class="cidetail">${it.detalle}</div>
+          <div class="qty"><button onclick="changeQty('${l}',-1)">−</button><span>${it.qty}</span><button onclick="changeQty('${l}',1)">+</button></div>
+          <button class="ciremove" onclick="removeLine('${l}')">Quitar</button></div>
+        <div class="ciprice">${old?`<span class="old">${fmt(it.ref*it.qty)}</span>`:''}<span class="now">${fmt(it.precio*it.qty)}</span></div>
+      </div>`;}).join('');
+  }
+  const t=totals();
+  document.getElementById('gift-box').innerHTML=giftHTML(t.count);
+  renderUpsell();
+  document.getElementById('mtotal-old').innerHTML=t.save>0?`Antes <s>${fmt(t.ref)}</s>`:'';
+  document.getElementById('mtotal-now').textContent=fmt(t.total);
+  document.getElementById('msave').textContent=t.save>0?`Estás ahorrando ${fmt(t.save)}`:'';
+}
+function openCart(){renderCartItems();document.getElementById('mbg').classList.add('show');document.body.style.overflow='hidden';}
+function closeCart(){document.getElementById('mbg').classList.remove('show');document.body.style.overflow='';}
+
+function sendWhatsApp(){
+  const keys=Object.keys(cart);if(!keys.length){openCart();return;}
+  const t=totals();
+  let m=CONFIG.saludoPedido+'\n\n';
+  keys.forEach(l=>{const it=cart[l];
+    m+=`• ${it.qty}x ${it.nombre} — ${fmt(it.precio)}`;
+    if(it.qty>1)m+=` (${fmt(it.precio*it.qty)})`;
+    m+='\n';
+    if(it.detalle&&it.tipo!=='solo'&&it.tipo!=='enterizo'&&it.tipo!=='trio')m+=`   ↳ ${it.detalle}\n`;
+    if(it.codigo)m+=`   [ref: ${it.codigo}]\n`;
+  });
+  if(CONFIG.regalos.activo&&t.count>=2){
+    m+=`\n🎁 Guías gratis:`;
+    m+=`\n1. ${CONFIG.regalos.pdf1}`;
+    if(t.count>=3)m+=`\n2. ${CONFIG.regalos.pdf2}`;
+  }
+  if(t.save>0)m+=`\n\nAntes: ${fmt(t.ref)}`;
+  m+=`\n*Total: ${fmt(t.total)}*`;
+  if(t.save>0)m+=`\n_Ahorro: ${fmt(t.save)}_`;
+  m+=`\n\nTalla única. ¿Me confirmas disponibilidad y envío? 🙌`;
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(m)}`,'_blank');
+}
+
+function navClick(e,id){
+  e.preventDefault();
+  const el=document.getElementById(id);
+  if(!el)return;
+  const y=el.getBoundingClientRect().top+window.pageYOffset-104;
+  window.scrollTo({top:y,behavior:'smooth'});
+  document.querySelectorAll('.navmenu a').forEach(a=>a.classList.remove('on'));
+  const link=document.querySelector(`.navmenu a[href="#${id}"]`);
+  if(link)link.classList.add('on');
+}
+
+function boot(){
+  document.getElementById('topbar').textContent=CONFIG.barraTop;
+  document.getElementById('brand').innerHTML=CONFIG.marca.replace(/(.)$/,'<span>$1</span>');
+  document.getElementById('hero-title').innerHTML='Sets que combinan solos,<br><em>a mejor precio.</em>';
+  document.getElementById('hero-sub').textContent=CONFIG.eslogan;
+  document.getElementById('footer').innerHTML=`<b>${CONFIG.marca}</b> · Ropa deportiva para mujer 💗<br><small>Precios sueltos de referencia. El descuento aplica al comprar en set o combo · Talla única.</small>`;
+  // 1º pinta lo visible (sets) para que la página aparezca ya
+  renderSets();updateCart();enableGalleries();
+  // el resto se pinta justo después, sin bloquear la primera pantalla
+  requestAnimationFrame(()=>{
+    renderEnterizos();renderArma();renderSueltos();enableGalleries();startAuto();
+  });
+}
+document.addEventListener('DOMContentLoaded',boot);
+</script>
+
+<!-- ================= ESTRUCTURA VISIBLE ================= -->
+<div class="topbar" id="topbar"></div>
+<header>
+  <div class="brand" id="brand">Bembé</div>
+  <button class="hdr-bag" onclick="openCart()">🛍 <span class="dot" id="hdr-count">0</span></button>
+</header>
+<nav class="navmenu" id="navmenu">
+  <a href="#sets" onclick="navClick(event,'sets')">Sets</a>
+  <a href="#enterizos" onclick="navClick(event,'enterizos')">Enterizos</a>
+  <a href="#arma-section" onclick="navClick(event,'arma-section')">Ármalo tú</a>
+  <a href="#individual" onclick="navClick(event,'individual')">Por separado</a>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">Sets con descuento · Colores únicos</div>
+  <h1 id="hero-title"></h1>
+  <p id="hero-sub"></p>
+  <a href="#sets" class="hero-cta" onclick="navClick(event,'sets')">Ver los sets ↓</a>
+</section>
+
+<div class="explainer" id="explainer">
+  <div class="explainer-inner">
+    <div class="ex-step"><span class="ex-num">1</span><span>Elige tu <b>set</b> (top + bottom) y paga menos que comprándolos por separado.</span></div>
+    <div class="ex-step"><span class="ex-num">2</span><span>Súmale un <b>enterizo</b> con descuento especial y arma tu trío.</span></div>
+    <div class="ex-step"><span class="ex-num">3</span><span>Recibe <b>guías digitales gratis</b> 🎁 mientras más piezas llevas.</span></div>
+  </div>
+</div>
+
+<div class="shead" id="sets">
+  <div class="kicker">Nuestros sets</div>
+  <h2>Sets pensados para ti</h2>
+  <p>Top y bottom combinados a un precio que no consigues comprando por separado.</p>
+</div>
+<div class="grid" id="sets-grid"></div>
+
+<div class="shead" id="enterizos">
+  <div class="kicker">Enterizos</div>
+  <h2>Enterizos Bembé</h2>
+  <p>Un solo paso, look completo. También los puedes sumar a tu set con descuento.</p>
+</div>
+<div class="grid" id="ent-grid"></div>
+
+<div class="shead" id="arma-section">
+  <div class="kicker">Ármalo tú</div>
+  <h2>Combínalo como quieras</h2>
+  <p></p>
+</div>
+<div class="armabox" id="arma-wrap"></div>
+
+<div class="shead" id="individual">
+  <div class="kicker">Todo el catálogo</div>
+  <h2>Compra por separado</h2>
+  <p>¿Solo quieres una pieza? Aquí está el inventario suelto, a precio individual.</p>
+</div>
+<div class="sologrid" id="solo-grid"></div>
+
+<footer id="footer"></footer>
+
+<div class="cartbar" id="cartbar">
+  <div class="cbinfo"><div class="cbcount"><span id="cb-count">0</span> piezas</div><div class="cbtotal" id="cb-total">$0</div></div>
+  <button class="cbsend" onclick="openCart()">Ver bolsa</button>
+  <button class="cbsend" onclick="sendWhatsApp()" style="background:var(--wa)"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2z"/></svg>WhatsApp</button>
+</div>
+
+<div class="mbg" id="mbg" onclick="if(event.target===this)closeCart()">
+  <div class="modal">
+    <button class="mclose" onclick="closeCart()">×</button>
+    <h3>Tu bolsa</h3>
+    <div class="msub">Revisa tu pedido y confírmalo por WhatsApp.</div>
+    <div id="cart-items"></div>
+    <div id="gift-box"></div>
+    <div id="upsell-box"></div>
+    <div class="mtotal-old" id="mtotal-old"></div>
+    <div class="mtotal"><span>Total</span><span id="mtotal-now">$0</span></div>
+    <div class="msave" id="msave"></div>
+    <button class="msend" onclick="sendWhatsApp()"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2z"/></svg>Enviar pedido por WhatsApp</button>
+  </div>
+</div>
